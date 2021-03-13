@@ -1,0 +1,182 @@
+.cart-product-image {
+    float: left;
+    width: 20%;
+}
+.cart-product-details {
+    float: left;
+    width: 37%;
+}
+.cart-product-price {
+    float: left;
+    width: 12%;
+}
+.cart-product-quantity {
+    float: left;
+    width: 10%;
+}
+.cart-product-removal {
+    float: left;
+    width: 9%;
+}
+.cart-product-line-price {
+    float: left;
+    width: 12%;
+    text-align: right;
+}
+/* This is used as the traditional .clearfix class */
+.group:before, .cart-shopping-cart:before, .cart-column-labels:before, .cart-product:before, .cart-totals-item:before, .group:after, .cart-shopping-cart:after, .cart-column-labels:after, .cart-product:after, .cart-totals-item:after {
+    content: '';
+    display: table;
+}
+.group:after, .cart-shopping-cart:after, .cart-column-labels:after, .cart-product:after, .cart-totals-item:after {
+    clear: both;
+}
+.group, .cart-shopping-cart, .cart-column-labels, .cart-product, .cart-totals-item {
+    zoom: 1;
+}
+/* Apply clearfix in a few places */
+/* Apply dollar signs */
+.product .cart-product-price:before, .cart-product .cart-product-line-price:before, .cart-totals-value:before {
+    content: 'PKR';
+}
+/* Body/Header stuff */
+
+h1 {
+    font-weight: 100;
+}
+label {
+    color: #aaa;
+}
+.cart-shopping-cart {
+    margin-top: -45px;
+}
+/* Column headers */
+.cart-column-labels label {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.cart-column-labels .cart-product-image, .cart-column-labels .cart-product-details, .cart-column-labels .cart-product-removal {
+    text-indent: -9999px;
+}
+/* Product entries */
+.cart-product {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+.cart-product .cart-product-image {
+    text-align: center;
+}
+.cart-product .cart-product-image img {
+    width: 100px;
+}
+.cart-product .cart-product-details .cart-product-title {
+    margin-right: 20px;
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+}
+.cart-product .cart-product-details .cart-product-description {
+    margin: 5px 20px 5px 0;
+    line-height: 1.4em;
+}
+.cart-product .cart-product-quantity input {
+    width: 40px;
+}
+.cart-product .cart-remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #c66;
+    color: #fff;
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+    font-size: 12px;
+    border-radius: 3px;
+}
+.cart-product .cart-remove-product:hover {
+    background-color: #a44;
+}
+/* Totals section */
+.cart-totals .cart-totals-item {
+    float: right;
+    clear: both;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.cart-totals .cart-totals-item label {
+    float: left;
+    clear: both;
+    width: 79%;
+    text-align: right;
+}
+.cart-totals .cart-totals-item .cart-totals-value {
+    float: right;
+    width: 21%;
+    text-align: right;
+}
+.cart-totals .cart-totals-item-total {
+    font-family: 'HelveticaNeue-Medium', 'Helvetica Neue Medium';
+}
+
+/* Make adjustments for tablet */
+@media screen and (max-width: 650px) {
+    .cart-shopping-cart {
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+   }
+    .cart-column-labels {
+        display: none;
+   }
+    .cart-product-image {
+        float: right;
+        width: auto;
+   }
+    .cart-product-image img {
+        margin: 0 0 10px 10px;
+   }
+    .cart-product-details {
+        float: none;
+        margin-bottom: 10px;
+        width: auto;
+   }
+    .cart-product-price {
+        clear: both;
+        width: 70px;
+   }
+    .cart-product-quantity {
+        width: 100px;
+   }
+    .cart-product-quantity input {
+        margin-left: 20px;
+   }
+    .cart-product-quantity:before {
+        content: 'x';
+   }
+    .cart-product-removal {
+        width: auto;
+   }
+    .cart-product-line-price {
+        float: right;
+        width: 70px;
+   }
+}
+/* Make more adjustments for phone */
+@media screen and (max-width: 350px) {
+    .cart-product-removal {
+        float: right;
+   }
+    .cart-product-line-price {
+        float: right;
+        clear: left;
+        width: auto;
+        margin-top: 10px;
+   }
+    .cart-product .cart-product-line-price:before {
+        content: 'Item Total: PKR';
+   }
+    .cart-totals .cart-totals-item label {
+        width: 60%;
+   }
+    .cart-totals .cart-totals-item .cart-totals-value {
+        width: 40%;
+   }
+}
